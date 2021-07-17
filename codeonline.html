@@ -19,19 +19,23 @@ body {
   background-color: #000000;
   overflow-x: hidden;
 }
-.sidenav a {
+.sidenav a{
   color: white;
-  padding: 12px;
+  padding: 8px;
   font-weight: bold;
   text-decoration: none;
   display: block;
 }
-.sidenav a:hover {
+#a1{
   background-color: #FFFF00;
   color: #ff4400;
 }
 #home{
   background-color: #1E90FF;
+}
+.sidenav a:hover {
+  background-color: #FFFF00;
+  color: #ff4400;
 }
 .content{
   height: 100%;
@@ -49,7 +53,6 @@ body {
   position: fixed;
   margin-right: 10px;
   border-bottom: 10px solid #1E90FF;
-  background-color: #1a1a1a;
   overflow-x: hidden;
 }
 .code a {
@@ -59,18 +62,22 @@ body {
   background-color: #FFFF00;
   text-decoration: none;
   display: block;
-
 }
-#index{
+#indexhtml{
   width: 100%;
   height: 100%;
   border: none;
   outline: none;
   resize: none;
-  background-color: #ff6347;
-  text-align: center;
   font-size: 20px;
   color: black;
+  overflow-x: hidden;
+}
+#indexcss{
+  display: none;
+}
+#indexjs{
+  display: none;
 }
 .liveview{
   height: 50%;
@@ -78,7 +85,6 @@ body {
   position: fixed;
   bottom: 0px;
   border-top: 11px solid #1E90FF;
-  background-color: #1a1a1a;
   overflow-x: hidden;
 }
 .liveview a {
@@ -89,24 +95,62 @@ body {
   background-color: #FFFF00;
   display: block;
 }
+#open_output{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+}
 </style>
 </head>
 <body>
 <div class="sidenav">
   <a href="codeonline3.html" id="home">index</a>
-  <a href="codeonline.html">index.html</a>
-  <a href="codeonline1.html">index.css</a>
-  <a href="codeonline2.html">index.js</a>
+  <a href="codeonline.html" id="a1">index.html</a>
+  <a href="codeonline1.html" id="a2">index.css</a>
+  <a href="codeonline2.html" id="a3">index.js</a>
 </div>
 <div class="content">
   <div class="code">
-    <a href="#">Edit >></a></a>
-     <textarea disabled id="index">Click in any one of the link to edit the code</textarea>
+    <a href="#">Edit >> index.html</a></a>
+    <textarea id="indexhtml" oninput="showOutput()">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Here is the code Preview</h2>
+    <p>The “live view” section must display the rendered website that was created by the user. When a change is made to any of the index.html, index.css, or index.js files, the “live view” section should hot-reload, and display the new output.
+    </p>
+    <p id="demo" style="display:none">Hello Dyte!!!!!</p>
+    <button type="button" onclick="document.getElementById('demo').style.display='block'" style="padding:5px;">Click me </button>
+</body>
+</html> 
+    </textarea>
+    <textarea id="indexcss" oninput="showOutput()"> body{
+  background-color:orange;
+}
+h1{
+  color:black;
+}
+p{
+  color:red;
+}  
+  <textarea id="indexjs" oninput="showOutput()"></textarea>
   </div>
   <div class="liveview">
     <a href="#">View >></a>
-    <textarea disabled id="index">Output area</textarea>
+    <iframe id="open_output"></iframe>
   </div>
 </div>
+<script type="text/javascript">
+  function showOutput(){
+  var indexhtml1 = document.getElementById("indexhtml").value;
+  var indexcss1 = "<style>" + document.getElementById("indexcss").value + "</style>";
+  var frame = document.getElementById("open_output").contentWindow.document;
+  frame.open();
+  frame.write(indexhtml1+indexcss1);
+  frame.close();
+}  
+</script>
 </body>
 </html>
