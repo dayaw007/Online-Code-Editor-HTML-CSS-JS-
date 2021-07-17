@@ -21,14 +21,14 @@ body {
   background-color: #000000;
   overflow-x: hidden;
 }
-.sidenav a {
+.sidenav a{
   color: white;
   padding: 8px;
   font-weight: bold;
   text-decoration: none;
   display: block;
 }
-#a2{
+#a1{
   background-color: #FFFF00;
   color: #ff4400;
 }
@@ -68,7 +68,7 @@ body {
   text-decoration: none;
   display: block;
 }
-#indexcss{
+#indexhtml{
   width: 100%;
   height: 100%;
   border: none;
@@ -78,7 +78,7 @@ body {
   color: black;
   overflow-x: hidden;
 }
-#indexhtml{
+#indexcss{
   display: none;
 }
 #indexjs{
@@ -112,36 +112,36 @@ body {
 <body>
 <div class="sidenav">
   <a id="image1"><img src="codeimage.PNG" width="80px" height="20px"></a>
-  <a href="codeonline3.html" id="home">index</a>
-  <a href="codeonline.html" id="a1">index.html</a>
-  <a href="codeonline1.html" id="a2">index.css</a>
-  <a href="codeonline2.html" id="a3">index.js</a>
+  <a href="index.html" id="home">index</a>
+  <a href="codeonline1.html" id="a1">index.html</a>
+  <a href="codeonline2.html" id="a2">index.css</a>
+  <a href="codeonline3.html" id="a3">index.js</a>
 </div>
 <div class="content">
   <div class="code">
-    <a href="#">Edit >> index.css</a></a>
-    <textarea id="indexhtml" oninput="showOutput()"><!DOCTYPE html>
+    <a href="#">Edit >> index.html</a></a>
+    <textarea id="indexhtml" oninput="showOutput()">
+<!DOCTYPE html>
 <html>
 <body>
   <h2>Here is the code Preview</h2>
     <p>The “live view” section must display the rendered website that was created by the user. When a change is made to any of the index.html, index.css, or index.js files, the “live view” section should hot-reload, and display the new output.
     </p>
     <p id="demo" style="display:none">Hello Dyte!!!!!</p>
-    <button type="button" onclick="document.getElementById('demo').style.display='block'" style="padding:5px;">Click me <button>
+    <button type="button" onclick="document.getElementById('demo').style.display='block'" style="padding:5px;">Click me </button>
 </body>
-</html> </textarea>
-    <textarea id="indexcss" oninput="showOutput()">
-body{
-	background-color:orange;
+</html> 
+    </textarea>
+    <textarea id="indexcss" oninput="showOutput()"> body{
+  background-color:orange;
 }
 h1{
-	color:black;
+  color:black;
 }
 p{
-	color:red;
-}
-    </textarea>
-    <textarea id="indexjs" oninput="showOutput()"></textarea>
+  color:red;
+}  
+  <textarea id="indexjs" oninput="showOutput()"></textarea>
   </div>
   <div class="liveview">
     <a href="#">View >></a>
@@ -160,4 +160,3 @@ p{
 </script>
 </body>
 </html>
-
