@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CodeOnline</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sidenav {
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  border-right: 10px solid #1E90FF;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+.sidenav a {
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+.sidenav a:hover {
+  background-color: #FFFF00;
+  color: #ff4400;
+}
+#home{
+  background-color: #1E90FF;
+}
+.content{
+  height: 100%;
+  width: 92.2%;
+  margin-top: 0px;
+  margin-left: 90.7px;
+  padding-left: 12px;
+  background-color: yellow;
+}
+.code{
+  height: 50%;
+  width: 92.2%;
+  top: 0px;
+  margin-left: 0px;
+  position: fixed;
+  margin-right: 10px;
+  border-bottom: 10px solid #1E90FF;
+  background-color: #1a1a1a;
+  overflow-x: hidden;
+}
+.code a {
+  color: #ff4400;
+  padding: 8px;
+  font-weight: bold;
+  background-color: #FFFF00;
+  text-decoration: none;
+  display: block;
+
+}
+#index{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: #ff6347;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+.liveview{
+  height: 50%;
+  width: 92.2%;
+  position: fixed;
+  bottom: 0px;
+  border-top: 11px solid #1E90FF;
+  background-color: #1a1a1a;
+  overflow-x: hidden;
+}
+.liveview a {
+  color: #ff4400;
+  padding: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #FFFF00;
+  display: block;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="codeonline3.html" id="home">index</a>
+  <a href="codeonline.html">index.html</a>
+  <a href="codeonline1.html">index.css</a>
+  <a href="codeonline2.html">index.js</a>
+</div>
+<div class="content">
+  <div class="code">
+    <a href="#">Edit >></a></a>
+     <textarea disabled id="index">Click in any one of the link to edit the code</textarea>
+  </div>
+  <div class="liveview">
+    <a href="#">View >></a>
+    <textarea disabled id="index">Output area</textarea>
+  </div>
+</div>
+</body>
+</html>
